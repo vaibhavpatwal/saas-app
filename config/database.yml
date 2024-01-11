@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  idle_timeout: 60
+  port: 5432
+  username: vaibhavpatwal
+  password: 12345
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: saas_app_development
+
+test:
+  <<: *default
+  database: saas_app_test
+
+production:
+  <<: *default
+  database: saas_app_production
